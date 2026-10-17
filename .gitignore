@@ -1,0 +1,17 @@
+# Publish only the intended package, tests and catalog documentation.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/plugin/
+!/tests/
+!/plugin-catalog/
+
+# Runtime/generated files must never ship.
+**/__pycache__/
+*.py[cod]
+.env
+.env.*
+/tests/isolated-*/
+/tests/*OUTPUT*.txt
+/tests/*OUTPUT*.json

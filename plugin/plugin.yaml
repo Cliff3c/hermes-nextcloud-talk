@@ -1,0 +1,42 @@
+name: nextcloud-talk
+label: Nextcloud Talk
+kind: platform
+version: "0.2.1"
+description: Nextcloud Talk signed text webhook bot adapter for Hermes Agent
+author: community
+provides_tools: []
+provides_hooks: []
+provides_middleware: []
+python_dependencies:
+  - aiohttp>=3.9,<4
+requires_env:
+  - name: NC_TALK_BASE_URL
+    description: "Nextcloud URL, e.g. https://nextcloud.example.com"
+    prompt: Nextcloud URL
+    password: false
+  - name: NC_TALK_BOT_SECRET
+    description: Shared secret from occ talk:bot:install
+    prompt: Bot shared secret
+    password: true
+optional_env:
+  - name: NC_TALK_API_USER
+    description: Optional Nextcloud user for room-type lookup
+    password: false
+  - name: NC_TALK_API_PASSWORD
+    description: Optional app password for room-type lookup
+    password: true
+  - name: NC_TALK_WEBHOOK_HOST
+    description: "Listener address (default: 0.0.0.0)"
+    password: false
+  - name: NC_TALK_WEBHOOK_PORT
+    description: "Listener port (default: 8788)"
+    password: false
+  - name: NC_TALK_WEBHOOK_PATH
+    description: "Listener path (default: /nextcloud-talk-webhook)"
+    password: false
+  - name: NC_TALK_IGNORE_BOTS
+    description: "Ignore bots/Application/Service actors (default: true)"
+    password: false
+  - name: NC_TALK_HOME_ROOM
+    description: Default room token for cron delivery
+    password: false
