@@ -8,7 +8,7 @@
 - Bound XML responses, reject DTDs/entities and ambiguous envelopes, and turn XML parse errors into controlled unconfirmed-send results without retrying the POST.
 - Normalize XML room-type metadata and preserve lookup failure backoff.
 - Add offline reconnect, XML success/error, empty acknowledgement, entity rejection and metadata regression coverage.
-- Generalize public documentation, make the test SDK path configurable and add a catalog submission draft.
+- Generalize public documentation, make the test SDK path configurable and add a catalog submission manifest.
 
 ## 0.2.0
 

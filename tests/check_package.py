@@ -47,7 +47,7 @@ def main():
             text = path.read_text()
             # Generic home-directory paths, not a list of a developer's identities.
             assert not re.search(r"/(?:home|Users)/[A-Za-z0-9_.-]+|[A-Za-z]:\\Users\\", text), path
-        print("Catalog draft/version/capability alignment and public documentation: PASS")
+        print("Catalog metadata/version/capability alignment and public documentation: PASS")
         unresolved = [key for key in ("repo", "sha", "maintainer")
                       if "REPLACE_" in str(entry[key])]
         if unresolved:
